@@ -1,45 +1,85 @@
-Get-ChildItem -Directory | ForEach-Object { @"
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workshop 3 - Advanced <CSS></title>
-    </CSS>
+    <title>Workshop 3 - Advanced CSS</title>
+    <style>
+      .transition-button {
+        background-color: lightblue;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .transition-button:hover {
+        background-color: lightcoral;
+      }
+
+      .animation-box {
+        width: 50px;
+        height: 50px;
+        background-color: lightgreen;
+        position: relative;
+        animation: move 2s infinite alternate;
+        margin: 1rem 0;
+      }
+      @keyframes move {
+        from { left: 0; }
+        to { left: 100px; }
+      }
+
+      .pseudo-list {
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0;
+        max-width: 220px;
+      }
+      .pseudo-list li {
+        padding: 8px;
+      }
+      .pseudo-list li:nth-child(odd) { background-color: lightgray; }
+      .pseudo-list li:nth-child(even) { background-color: white; }
+
+      .filter-image {
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 1rem 0;
+      }
+      .filter-image:hover { filter: grayscale(0%); }
+
+      .quote {
+        position: relative;
+        padding-left: 30px;
+        font-style: italic;
+        margin: 1rem 0;
+      }
+      .quote::before {
+        content: "“";
+        font-size: 40px;
+        position: absolute;
+        left: 0;
+        top: -8px;
+        color: lightgray;
+      }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Workshop 3 - Advanced CSS</h1>
-    <div class="content-box">
-        <p>This workshop focuses on advanced CSS techniques including Flexbox, Grid, and responsive design.</p>
-    </div>
-    
-    <table>
-        <tr>
-            <th>Feature</th>
-            <th>Description</th>
-        </tr>
-        <tr>
-            <td>Flexbox</td>
-            <td>A layout model for arranging elements in a one-dimensional space.</td>
-        </tr>
-        <tr>
-            <td>Grid</td>
-            <td>A two-dimensional layout system for complex web designs.</td>
-        </tr>
-        <tr>
-            <td>Responsive Design</td>
-            <td>Techniques to ensure web pages look good on all devices.</td>
-        </tr>
-    </table>
-    
-    <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <input type="submit" value="Submit">
-    </form>
+  <button class="transition-button">Hover me</button>
+
+  <div class="animation-box" aria-hidden="true"></div>
+  <img src="path/to/image.jpg" alt="Sample Image" class="filter-image">
+  <ul class="pseudo-list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+  <blockquote class="quote">
+    This is a sample quote.
+  </blockquote>
 </body>
 </html>
