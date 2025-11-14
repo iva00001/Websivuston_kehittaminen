@@ -4,10 +4,42 @@ Get-ChildItem -Directory | ForEach-Object { @"
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$($_.Name)</title>
+    <title>Workshop 3 - Advanced <CSS></title>
+    </CSS>
 </head>
 <body>
-    <h1>$($_.Name)</h1>
+    <h1>Welcome to Workshop 3 - Advanced CSS</h1>
+    <div class="content-box">
+        <p>This workshop focuses on advanced CSS techniques including Flexbox, Grid, and responsive design.</p>
+    </div>
+    
+    <table>
+        <tr>
+            <th>Feature</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Flexbox</td>
+            <td>A layout model for arranging elements in a one-dimensional space.</td>
+        </tr>
+        <tr>
+            <td>Grid</td>
+            <td>A two-dimensional layout system for complex web designs.</td>
+        </tr>
+        <tr>
+            <td>Responsive Design</td>
+            <td>Techniques to ensure web pages look good on all devices.</td>
+        </tr>
+    </table>
+    
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
-"@ | Out-File -FilePath "$($_.FullName)\index.html" -Encoding UTF8 }
