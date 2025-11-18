@@ -1,120 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page Layout Techniques</title>
-    <link rel="stylesheet" href="./styles/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
 
-    <style>
-        body { font-family: Arial, sans-serif; }
-    </style>
-<div class="flex-container">
-    <div class="box">Box 1</div>
-    <div class="box">Box 2</div>
-    <div class="box">Box 3</div>
-  </div>
-    <style>
-        .flex-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  .box {
-    background-color: lightblue;
-    padding: 20px;
-    text-align: center;
-  }
-    </style>
+  <body>
+    <div class="flex-container">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
     <div class="grid-container">
-    <div class="grid-item">1</div>
-    <div class="grid-item">2</div>
-    <div class="grid-item">3</div>
-    <div class="grid-item">4</div>
-    <div class="grid-item">5</div>
-    <div class="grid-item">6</div>
-  </div>
-  <style>
-    .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-  }
-  
-  .grid-item {
-    background-color: lightgreen;
-    padding: 20px;
-    text-align: center;
-    }
-  
-  </style>
-  <button class="transition-button">Hover me</button>
-  <div class="responsive-box">Resize the window to see the effect</div>
-<header>
-    <h1>My Website</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>This is a paragraph about me.</p>
-    </section>
-  </main>
-
-   <main>
-    <section id="services">
-      <h2>About service</h2>
-      <p>This is a paragraph about my service.</p>
-    </section>
-  </main>
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+    </div>
+    <button class="transition-button">Hover me</button>
+    <div class="responsive-box">Resize the window to see the effect</div>
+    <header>
+      <h1>My Website</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <main>
-     <section id="contact">
+      <section id="about">
+        <h2>About Me</h2>
+        <p>This is a paragraph about me.</p>
+      </section>
+
+      <section id="services">
+        <h2>About service</h2>
+        <p>This is a paragraph about my service.</p>
+      </section>
+
+      <section id="contact">
         <h2>Contact Me</h2>
         <p>This is a paragraph about my contact.</p>
-     </section>
+      </section>
+    </main>
 
-  <footer>
-    <p>Copyright 2025</p>
-  </footer>
-    <style>
-      .transition-button {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-        margin: 1rem 0;
-      }
-      .transition-button:hover {
-        background-color: #45a049;
-        transform: scale(1.1);
-      }
-
-      .animation-box {
-        width: 100px;
-        height: 100px;
-        background-color: coral;
-        position: relative;
-        animation: move 2s infinite alternate;
-        margin: 1rem 0;
-      }
-      @keyframes move {
-        from { left: 0; }
-        to { left: 150px; }
-      }
-    </style>
-    </CSS>
-<body>
+    <footer>
+      <p>Copyright 2025</p>
+    </footer>
+  </body>
 </html>
