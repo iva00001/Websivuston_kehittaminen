@@ -1,13 +1,34 @@
-Get-ChildItem -Directory | ForEach-Object { @"
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$($_.Name)</title>
-</head>
-<body>
-    <h1>$($_.Name)</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05 - Design Principles</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <div class="background-section"></div>
+    <div class="responsive-container">
+      <div class="column desktop-only">Column 1 - Desktop</div>
+      <div class="column mobile-only">Column 2 - Mobile</div>
+    </div>
+
+    <div class="media-query-box">Resize the window to see the effect</div>
+
+    <h1>Responsive Image Example</h1>
+    <h1>My Image</h1>
+    <img  src="c:\Users\ivona\OneDrive\Kuvat\gora.jpg" alt="My photo"  class="filter-image"    />
+
+    <div style="margin-top: 30px"></div>
+    <button class="transition-button">Hover me</button>
+
+    <nav class="responsive-nav">
+      <button class="menu-toggle">☰ Menu</button>
+      <ul class="nav-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </body>
 </html>
-"@ | Out-File -FilePath "$($_.FullName)\index.html" -Encoding UTF8 }
